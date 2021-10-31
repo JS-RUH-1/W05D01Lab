@@ -1,14 +1,13 @@
 import React, { useContext } from "react";
-import { setContext } from "./Header";
+import { setContext } from "../App";
 function Body() {
   const arr = useContext(setContext);
 
   return (
     <div>
-      <setContext.Provider>
-        <h1>{arr[0]}</h1>
+      <setContext>
         <img width="20%" src={arr[1]} />
-      </setContext.Provider>
+      </setContext>
     </div>
   );
 }
